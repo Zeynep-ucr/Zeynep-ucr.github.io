@@ -3,61 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <title>Ana Sayfa | Kişisel Portfolyo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #222;
+        }
 
-<style>
+        header, nav, main, footer {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
 
-.contact-container {
-    width: 50%;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
 
-.contact-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.contact-container label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
+        nav a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: bold;
+        }
 
-.contact-container input,
-.contact-container select,
-.contact-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 18px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-}
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-.contact-container textarea {
-    resize: vertical;
-}
+        footer {
+            text-align: center;
+            padding: 15px 0 30px 0;
+        }
 
-.contact-container button {
-    width: 100%;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        .contact-container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            border: 1px solid #d9d9d9;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
 
-.contact-container button:hover {
-    background-color: #0f5fd3;
-}
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-</style>
+        .contact-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
+        .contact-container input[type="text"],
+        .contact-container input[type="email"],
+        .contact-container input[type="password"],
+        .contact-container input[type="file"],
+        .contact-container select,
+        .contact-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .contact-container textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .option-box {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin-bottom: 18px;
+            background-color: #fafafa;
+        }
+
+        .option-box label {
+            display: block;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .button-group button {
+            flex: 1;
+            border: none;
+            padding: 13px;
+            border-radius: 6px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #1877f2;
+        }
+
+        .submit-btn:hover {
+            background-color: #0f63d1;
+        }
+
+        .reset-btn {
+            background-color: #dc3545;
+        }
+
+        .reset-btn:hover {
+            background-color: #b52a37;
+        }
+    </style>
 </head>
 <body>
 
@@ -99,36 +180,52 @@
     <p><a href="#hedef">Kariyer Hedefime Git</a></p>
 </main>
 
-
 <section class="contact-container">
+    <h2>Detaylı İletişim Formu</h2>
 
-<h2>İletişim Formu</h2>
+    <form>
+        <label for="fullname">Ad Soyad:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Örn: Asaf Karataş">
 
-<form>
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email" placeholder="ornek@mail.com">
 
-<label for="fullname">Ad Soyad</label>
-<input type="text" id="fullname" name="fullname" placeholder="Adınızı ve soyadınızı yazın">
+        <label for="password">Başvuru Takip Şifresi:</label>
+        <input type="password" id="password" name="password" placeholder="Şifrenizi girin">
 
-<label for="email">E-posta</label>
-<input type="email" id="email" name="email" placeholder="ornek@mail.com">
+        <label>İletişim Tercihi:</label>
+        <div class="option-box">
+            <label><input type="radio" name="contact_preference" value="email"> Bana e-posta ile ulaşın</label>
+            <label><input type="radio" name="contact_preference" value="phone"> Bana telefonla ulaşın</label>
+        </div>
 
-<label for="subject">Konu</label>
-<select id="subject" name="subject">
-<option value="">Bir konu seçin</option>
-<option value="is">İş Teklifi</option>
-<option value="soru">Soru</option>
-<option value="geri">Geri Bildirim</option>
-</select>
+        <label>İlgi Alanları / Yetenekler:</label>
+        <div class="option-box">
+            <label><input type="checkbox" name="skills" value="html"> HTML</label>
+            <label><input type="checkbox" name="skills" value="css"> CSS</label>
+            <label><input type="checkbox" name="skills" value="algoritma"> Algoritma</label>
+        </div>
 
-<label for="message">Mesaj</label>
-<textarea id="message" name="message" rows="6" placeholder="Mesajınızı buraya yazın"></textarea>
+        <label for="subject">Konu:</label>
+        <select id="subject" name="subject">
+            <option value="">Lütfen bir konu seçin...</option>
+            <option value="is-teklifi">İş Teklifi</option>
+            <option value="soru">Soru</option>
+            <option value="geri-bildirim">Geri Bildirim</option>
+        </select>
 
-<button type="submit">Gönder</button>
+        <label for="file">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+        <input type="file" id="file" name="file">
 
-</form>
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
+        <div class="button-group">
+            <button type="submit" class="submit-btn">Gönder</button>
+            <button type="reset" class="reset-btn">Temizle</button>
+        </div>
+    </form>
 </section>
-
 
 <footer>
     <p>© 2026 Zeynep UÇAR | Web Programlama Dersi</p>
