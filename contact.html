@@ -1,30 +1,201 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İletişim</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f7fb;
+color:#1e293b;
+line-height:1.6;
+}
+
+.page-wrapper{
+width:92%;
+max-width:1100px;
+margin:0 auto;
+}
+
+header{
+margin-top:30px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:white;
+border-radius:22px;
+padding:42px 24px;
+text-align:center;
+box-shadow:0 14px 32px rgba(15,23,42,0.18);
+}
+
+header h1{
+margin:0 0 10px 0;
+font-size:36px;
+}
+
+header p{
+margin:0;
+color:#dbeafe;
+}
+
+nav{
+margin:18px 0 24px 0;
+background:#ffffff;
+border:1px solid #dbe3ef;
+border-radius:16px;
+padding:14px 20px;
+box-shadow:0 8px 24px rgba(15,23,42,0.05);
+}
+
+nav ul{
+margin:0;
+padding:0;
+list-style:none;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+nav a{
+text-decoration:none;
+color:#1e3a8a;
+font-weight:bold;
+padding:10px 16px;
+border-radius:10px;
+transition:0.25s;
+}
+
+nav a:hover{
+background:#eff6ff;
+}
+
+main{
+background:#ffffff;
+border:1px solid #dbe3ef;
+border-radius:20px;
+padding:32px 28px;
+box-shadow:0 10px 28px rgba(15,23,42,0.05);
+}
+
+main h1{
+margin-top:0;
+}
+
+main h2{
+color:#0f172a;
+margin-top:24px;
+margin-bottom:12px;
+font-size:24px;
+}
+
+main p,
+main li{
+color:#475569;
+font-size:15px;
+}
+
+ul{
+padding-left:22px;
+}
+
+.contact-box{
+background:#f8fafc;
+border:1px solid #e2e8f0;
+border-radius:14px;
+padding:18px;
+margin-top:10px;
+}
+
+.contact-box li{
+margin-bottom:8px;
+}
+
+.contact-box a{
+color:#2563eb;
+text-decoration:none;
+font-weight:bold;
+}
+
+.contact-box a:hover{
+text-decoration:underline;
+}
+
+.faq-box{
+background:#f8fafc;
+border:1px solid #e2e8f0;
+border-radius:14px;
+padding:18px;
+margin-top:12px;
+}
+
+.faq-box h3{
+margin-top:0;
+color:#1e3a8a;
+}
+
+main a{
+color:#2563eb;
+text-decoration:none;
+font-weight:bold;
+}
+
+main a:hover{
+text-decoration:underline;
+}
+
+footer{
+text-align:center;
+color:#64748b;
+padding:28px 12px 40px 12px;
+font-size:14px;
+}
+
+</style>
+
 </head>
+
 <body>
+
+<div class="page-wrapper">
+
+<header>
+<h1>Zeynep UÇAR</h1>
+<p>Bilgisayar Mühendisliği Öğrencisi | Web & Yazılım Geliştirici Adayı</p>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Ana Sayfa</a></li>
+<li><a href="about.html">Hakkımda</a></li>
+<li><a href="interests.html">İlgi Alanlarım</a></li>
+<li><a href="contact.html">İletişim</a></li>
+</ul>
+</nav>
+
+<main>
 
 <h1>İletişim</h1>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkımda</a></li>
-        <li><a href="interests.html">İlgi Alanlarım</a></li>
-        <li><a href="contact.html">İletişim</a></li>
-    </ul>
-</nav>
-
 <h2>İletişim Bilgilerim</h2>
+
+<div class="contact-box">
 <ul>
-    <li>E-posta: <a href="mailto:zeynepucar129.828@gmail.com">zeynepucar129.828@gmail.com</a></li>
-    <li>GitHub: <a href="https://github.com/Zeynep-ucr" >Github Profilim</a></li>
-   
+<li>E-posta: <a href="mailto:zeynepucar129.828@gmail.com">zeynepucar129.828@gmail.com</a></li>
+<li>GitHub: <a href="https://github.com/Zeynep-ucr">Github Profilim</a></li>
 </ul>
+</div>
 
 <h2>Sık Sorulan Sorular</h2>
+
+<div class="faq-box">
 
 <h3>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</h3>
 <p>Genellikle 24 saat içinde dönüş yapmaya çalışırım.</p>
@@ -32,16 +203,17 @@
 <h3>Projelerde iş birliğine açık mısınız?</h3>
 <p>Evet, özellikle açık kaynak ve eğitim projelerinde iş birliklerine açığım.</p>
 
+</div>
+
 <p><a href="index.html">← Ana sayfaya geri dön</a></p>
 
+</main>
+
 <footer>
-    <p>© 2026 Web Programlama Dersi</p>
+<p>© 2026 Web Programlama Dersi</p>
 </footer>
+
+</div>
 
 </body>
 </html>
-
-
-
-
-
