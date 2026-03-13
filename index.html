@@ -3,6 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Ana Sayfa | Kişisel Portfolyo</title>
+
+<style>
+
+.contact-container {
+    width: 50%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container select,
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.contact-container textarea {
+    resize: vertical;
+}
+
+.contact-container button {
+    width: 100%;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #0f5fd3;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -43,6 +98,37 @@
     <h2>Hızlı Bağlantılar</h2>
     <p><a href="#hedef">Kariyer Hedefime Git</a></p>
 </main>
+
+
+<section class="contact-container">
+
+<h2>İletişim Formu</h2>
+
+<form>
+
+<label for="fullname">Ad Soyad</label>
+<input type="text" id="fullname" name="fullname" placeholder="Adınızı ve soyadınızı yazın">
+
+<label for="email">E-posta</label>
+<input type="email" id="email" name="email" placeholder="ornek@mail.com">
+
+<label for="subject">Konu</label>
+<select id="subject" name="subject">
+<option value="">Bir konu seçin</option>
+<option value="is">İş Teklifi</option>
+<option value="soru">Soru</option>
+<option value="geri">Geri Bildirim</option>
+</select>
+
+<label for="message">Mesaj</label>
+<textarea id="message" name="message" rows="6" placeholder="Mesajınızı buraya yazın"></textarea>
+
+<button type="submit">Gönder</button>
+
+</form>
+
+</section>
+
 
 <footer>
     <p>© 2026 Zeynep UÇAR | Web Programlama Dersi</p>
