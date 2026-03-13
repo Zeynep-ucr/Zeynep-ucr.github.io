@@ -7,16 +7,13 @@
 
 <style>
 
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#f4f7fb;
 color:#1e293b;
-line-height:1.6;
 }
 
 .page-wrapper{
@@ -32,26 +29,14 @@ color:white;
 border-radius:22px;
 padding:42px 24px;
 text-align:center;
-box-shadow:0 14px 32px rgba(15,23,42,0.18);
-}
-
-header h1{
-margin:0 0 10px 0;
-font-size:36px;
-}
-
-header p{
-margin:0;
-color:#dbeafe;
 }
 
 nav{
 margin:18px 0 24px 0;
-background:#ffffff;
+background:white;
 border:1px solid #dbe3ef;
 border-radius:16px;
 padding:14px 20px;
-box-shadow:0 8px 24px rgba(15,23,42,0.05);
 }
 
 nav ul{
@@ -61,7 +46,6 @@ list-style:none;
 display:flex;
 justify-content:center;
 gap:14px;
-flex-wrap:wrap;
 }
 
 nav a{
@@ -70,96 +54,71 @@ color:#1e3a8a;
 font-weight:bold;
 padding:10px 16px;
 border-radius:10px;
-transition:0.25s;
 }
 
-nav a:hover{
-background:#eff6ff;
-}
+nav a:hover{background:#eff6ff;}
 
-main{
-background:#ffffff;
+.contact-container{
+background:white;
 border:1px solid #dbe3ef;
-border-radius:20px;
-padding:32px 28px;
-box-shadow:0 10px 28px rgba(15,23,42,0.05);
+border-radius:22px;
+padding:34px 28px;
+box-shadow:0 12px 30px rgba(15,23,42,0.06);
 }
 
-main h1{
-margin-top:0;
+.contact-container h2{
+text-align:center;
 }
 
-main h2{
-color:#0f172a;
-margin-top:24px;
-margin-bottom:12px;
-font-size:24px;
+input,select,textarea{
+width:100%;
+padding:14px;
+margin-bottom:18px;
+border:1px solid #cbd5e1;
+border-radius:12px;
+background:#f8fafc;
 }
 
-main p,
-main li{
-color:#475569;
-font-size:15px;
-}
+textarea{min-height:130px;}
 
-ul{
-padding-left:22px;
-}
-
-.contact-box{
+.option-box{
 background:#f8fafc;
 border:1px solid #e2e8f0;
 border-radius:14px;
-padding:18px;
-margin-top:10px;
+padding:14px;
+margin-bottom:18px;
 }
 
-.contact-box li{
-margin-bottom:8px;
+.button-group{
+display:flex;
+gap:14px;
 }
 
-.contact-box a{
-color:#2563eb;
-text-decoration:none;
+button{
+flex:1;
+border:none;
+padding:14px;
+border-radius:12px;
 font-weight:bold;
 }
 
-.contact-box a:hover{
-text-decoration:underline;
+.submit-btn{
+background:#2563eb;
+color:white;
 }
 
-.faq-box{
-background:#f8fafc;
-border:1px solid #e2e8f0;
-border-radius:14px;
-padding:18px;
-margin-top:12px;
-}
-
-.faq-box h3{
-margin-top:0;
-color:#1e3a8a;
-}
-
-main a{
-color:#2563eb;
-text-decoration:none;
-font-weight:bold;
-}
-
-main a:hover{
-text-decoration:underline;
+.reset-btn{
+background:#dc2626;
+color:white;
 }
 
 footer{
 text-align:center;
+padding:30px;
 color:#64748b;
-padding:28px 12px 40px 12px;
-font-size:14px;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -180,37 +139,60 @@ font-size:14px;
 </ul>
 </nav>
 
-<main>
+<div class="contact-container">
 
-<h1>İletişim</h1>
+<h2>Detaylı İletişim Formu</h2>
 
-<h2>İletişim Bilgilerim</h2>
+<form>
 
-<div class="contact-box">
-<ul>
-<li>E-posta: <a href="mailto:zeynepucar129.828@gmail.com">zeynepucar129.828@gmail.com</a></li>
-<li>GitHub: <a href="https://github.com/Zeynep-ucr">Github Profilim</a></li>
-</ul>
+<label>Ad Soyad</label>
+<input type="text" placeholder="Adınız">
+
+<label>E-posta</label>
+<input type="email" placeholder="ornek@mail.com">
+
+<label>Şifre</label>
+<input type="password">
+
+<label>İletişim Tercihi</label>
+
+<div class="option-box">
+<label><input type="radio" name="contact"> E-posta</label>
+<label><input type="radio" name="contact"> Telefon</label>
 </div>
 
-<h2>Sık Sorulan Sorular</h2>
+<label>Yetenekler</label>
 
-<div class="faq-box">
-
-<h3>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</h3>
-<p>Genellikle 24 saat içinde dönüş yapmaya çalışırım.</p>
-
-<h3>Projelerde iş birliğine açık mısınız?</h3>
-<p>Evet, özellikle açık kaynak ve eğitim projelerinde iş birliklerine açığım.</p>
-
+<div class="option-box">
+<label><input type="checkbox"> HTML</label>
+<label><input type="checkbox"> CSS</label>
+<label><input type="checkbox"> Algoritma</label>
 </div>
 
-<p><a href="index.html">← Ana sayfaya geri dön</a></p>
+<label>Konu</label>
+<select>
+<option>İş Teklifi</option>
+<option>Soru</option>
+<option>Geri Bildirim</option>
+</select>
 
-</main>
+<label>Dosya</label>
+<input type="file">
+
+<label>Mesaj</label>
+<textarea></textarea>
+
+<div class="button-group">
+<button class="submit-btn">Gönder</button>
+<button class="reset-btn">Temizle</button>
+</div>
+
+</form>
+
+</div>
 
 <footer>
-<p>© 2026 Web Programlama Dersi</p>
+<p>© 2026 Zeynep UÇAR | Web Programlama Dersi</p>
 </footer>
 
 </div>
