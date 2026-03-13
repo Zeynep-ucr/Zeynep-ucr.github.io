@@ -1,366 +1,239 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa | Kişisel Portfolyo</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        color: #1e293b;
+        line-height: 1.6;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #1f2937;
-            line-height: 1.6;
-        }
+    .page-wrapper {
+        width: 92%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
 
-        .page-wrapper {
-            width: 92%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+    header {
+        margin-top: 30px;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        color: white;
+        border-radius: 22px;
+        padding: 42px 24px;
+        text-align: center;
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+    }
 
-        header {
-            margin-top: 30px;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 20px;
-            padding: 40px 24px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-        }
+    header h1 {
+        margin: 0 0 10px 0;
+        font-size: 36px;
+    }
 
+    header p {
+        margin: 0;
+        font-size: 16px;
+        color: #dbeafe;
+    }
+
+    nav {
+        margin: 18px 0 24px 0;
+        background: #ffffff;
+        border: 1px solid #dbe3ef;
+        border-radius: 16px;
+        padding: 14px 20px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #1e3a8a;
+        font-weight: bold;
+        padding: 10px 16px;
+        border-radius: 10px;
+        transition: 0.25s;
+    }
+
+    nav a:hover {
+        background: #eff6ff;
+    }
+
+    main {
+        background: #ffffff;
+        border: 1px solid #dbe3ef;
+        border-radius: 20px;
+        padding: 32px 28px;
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+    }
+
+    main h2 {
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    main p,
+    main li {
+        color: #475569;
+        font-size: 15px;
+    }
+
+    main a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 760px;
+        margin: 32px auto 0 auto;
+        background: #ffffff;
+        border: 1px solid #dbe3ef;
+        border-radius: 22px;
+        padding: 34px 28px;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .contact-container h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 28px;
+        color: #0f172a;
+        font-size: 30px;
+    }
+
+    .contact-container label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #334155;
+        font-size: 14px;
+    }
+
+    .contact-container input[type="text"],
+    .contact-container input[type="email"],
+    .contact-container input[type="password"],
+    .contact-container input[type="file"],
+    .contact-container select,
+    .contact-container textarea {
+        width: 100%;
+        padding: 14px 15px;
+        margin-bottom: 18px;
+        border: 1px solid #cbd5e1;
+        border-radius: 12px;
+        background: #f8fafc;
+        font-size: 14px;
+        color: #0f172a;
+        transition: 0.25s ease;
+    }
+
+    .contact-container input:focus,
+    .contact-container select:focus,
+    .contact-container textarea:focus {
+        outline: none;
+        border-color: #3b82f6;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+    }
+
+    .contact-container textarea {
+        min-height: 130px;
+        resize: vertical;
+    }
+
+    .option-box {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 14px 16px;
+        margin-bottom: 18px;
+    }
+
+    .option-box label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-weight: normal;
+        color: #475569;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 14px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+    }
+
+    .button-group button {
+        flex: 1;
+        min-width: 180px;
+        border: none;
+        border-radius: 12px;
+        padding: 14px 18px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .button-group button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .submit-btn {
+        background: #2563eb;
+        color: white;
+    }
+
+    .reset-btn {
+        background: #dc2626;
+        color: white;
+    }
+
+    footer {
+        text-align: center;
+        color: #64748b;
+        padding: 28px 12px 40px 12px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
         header h1 {
-            margin: 0 0 10px 0;
-            font-size: 36px;
-            color: #111827;
-        }
-
-        header p {
-            margin: 0;
-            font-size: 16px;
-            color: #6b7280;
-        }
-
-        nav {
-            margin: 18px 0 24px 0;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 14px 20px;
-            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-        }
-
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #374151;
-            font-weight: bold;
-            padding: 10px 16px;
-            border-radius: 10px;
-            transition: 0.25s;
-        }
-
-        nav a:hover {
-            background: #eff6ff;
-            color: #2563eb;
-        }
-
-        main {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 20px;
-            padding: 32px 28px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-        }
-
-        main h2 {
-            color: #111827;
-            margin-top: 0;
-            margin-bottom: 12px;
-            font-size: 24px;
-        }
-
-        main p,
-        main li {
-            color: #4b5563;
-            font-size: 15px;
-        }
-
-        main ul {
-            padding-left: 20px;
-        }
-
-        main a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        main a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-container {
-            width: 100%;
-            max-width: 760px;
-            margin: 32px auto 0 auto;
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 22px;
-            padding: 34px 28px;
-            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+            font-size: 28px;
         }
 
         .contact-container h2 {
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 28px;
-            color: #111827;
-            font-size: 30px;
+            font-size: 24px;
         }
 
-        .contact-container label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #374151;
-            font-size: 14px;
-        }
-
-        .contact-container input[type="text"],
-        .contact-container input[type="email"],
-        .contact-container input[type="password"],
-        .contact-container input[type="file"],
-        .contact-container select,
-        .contact-container textarea {
-            width: 100%;
-            padding: 14px 15px;
-            margin-bottom: 18px;
-            border: 1px solid #d1d5db;
-            border-radius: 12px;
-            background: #f9fafb;
-            font-size: 14px;
-            color: #111827;
-            transition: 0.25s ease;
-        }
-
-        .contact-container input[type="text"]:focus,
-        .contact-container input[type="email"]:focus,
-        .contact-container input[type="password"]:focus,
-        .contact-container input[type="file"]:focus,
-        .contact-container select:focus,
-        .contact-container textarea:focus {
-            outline: none;
-            border-color: #60a5fa;
-            background: #ffffff;
-            box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
-        }
-
-        .contact-container textarea {
-            min-height: 130px;
-            resize: vertical;
-        }
-
-        .option-box {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
-            padding: 14px 16px;
-            margin-bottom: 18px;
-        }
-
-        .option-box label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            font-weight: normal;
-            color: #4b5563;
-        }
-
-        .option-box label:last-child {
-            margin-bottom: 0;
+        main,
+        .contact-container,
+        header {
+            padding: 24px 18px;
         }
 
         .button-group {
-            display: flex;
-            gap: 14px;
-            margin-top: 8px;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
-
-        .button-group button {
-            flex: 1;
-            min-width: 180px;
-            border: none;
-            border-radius: 12px;
-            padding: 14px 18px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .button-group button:hover {
-            transform: translateY(-1px);
-            opacity: 0.96;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .submit-btn {
-            background: #2563eb;
-            color: white;
-        }
-
-        .reset-btn {
-            background: #ef4444;
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            color: #6b7280;
-            padding: 28px 12px 40px 12px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            .contact-container h2 {
-                font-size: 24px;
-            }
-
-            main,
-            .contact-container,
-            header {
-                padding: 24px 18px;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .button-group button {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="page-wrapper">
-
-    <header>
-        <h1>Zeynep UÇAR</h1>
-        <p>Bilgisayar Mühendisliği Öğrencisi | Web & Yazılım Geliştirici Adayı</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="contact.html">İletişim</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h2>Hoş Geldiniz</h2>
-
-        <p>
-            Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış kişisel mini portfolyo sayfamdır.
-            Amacım HTML temel etiketlerini kullanarak yapısal bir web sayfası oluşturmaktır.
-        </p>
-
-        <h2 id="hedef">Kariyer Hedefim</h2>
-        <p>
-            Backend ve sistem tarafında uzmanlaşarak ölçeklenebilir ve güvenli yazılımlar geliştirmek istiyorum.
-        </p>
-
-        <h2>Hızlı Bilgiler</h2>
-        <ul>
-            <li>Üniversite: Marmara Üniversitesi</li>
-            <li>Bölüm: Bilgisayar Mühendisliği</li>
-            <li>İlgi Alanı: Web Teknolojileri & Sistem Programlama</li>
-        </ul>
-
-        <h2>Hızlı Bağlantılar</h2>
-        <p><a href="#hedef">Kariyer Hedefime Git</a></p>
-    </main>
-
-    <section class="contact-container">
-        <h2>Detaylı İletişim Formu</h2>
-
-        <form>
-            <label for="fullname">Ad Soyad:</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Örn: Asaf Karataş">
-
-            <label for="email">E-posta Adresi:</label>
-            <input type="email" id="email" name="email" placeholder="ornek@mail.com">
-
-            <label for="password">Başvuru Takip Şifresi:</label>
-            <input type="password" id="password" name="password" placeholder="Şifrenizi girin">
-
-            <label>İletişim Tercihi:</label>
-            <div class="option-box">
-                <label><input type="radio" name="contact_preference" value="email"> Bana e-posta ile ulaşın</label>
-                <label><input type="radio" name="contact_preference" value="phone"> Bana telefonla ulaşın</label>
-            </div>
-
-            <label>İlgi Alanları / Yetenekler:</label>
-            <div class="option-box">
-                <label><input type="checkbox" name="skills" value="html"> HTML</label>
-                <label><input type="checkbox" name="skills" value="css"> CSS</label>
-                <label><input type="checkbox" name="skills" value="algoritma"> Algoritma</label>
-            </div>
-
-            <label for="subject">Konu:</label>
-            <select id="subject" name="subject">
-                <option value="">Lütfen bir konu seçin...</option>
-                <option value="is-teklifi">İş Teklifi</option>
-                <option value="soru">Soru</option>
-                <option value="geri-bildirim">Geri Bildirim</option>
-            </select>
-
-            <label for="file">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-            <input type="file" id="file" name="file">
-
-            <label for="message">Mesajınız:</label>
-            <textarea id="message" name="message" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
-
-            <div class="button-group">
-                <button type="submit" class="submit-btn">Gönder</button>
-                <button type="reset" class="reset-btn">Temizle</button>
-            </div>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2026 Zeynep UÇAR | Web Programlama Dersi</p>
-    </footer>
-
-</div>
-
-</body>
-</html>
+    }
+</style>
