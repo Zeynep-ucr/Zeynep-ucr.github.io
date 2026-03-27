@@ -1,1 +1,213 @@
 
+/* GENEL SIFIRLAMA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* ANA WRAPPER
+   100vh zorunlu
+   ana yapı flex-column zorunlu
+*/
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 1vh 1vw;
+}
+
+/* ORTAK GÖRÜNÜM */
+.navbar,
+.hero,
+.cards-section,
+.flex-grow-section,
+.footer {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 1vw;
+}
+
+/* 1) NAVBAR - 10vh */
+.navbar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+/* 2) HERO - 30vh */
+.hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2vw;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5vh;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    color: #222;
+}
+
+.hero-text p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.hero-text button {
+    width: 10vw;
+    min-width: 100px;
+    padding: 1vh 1vw;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f8ef7;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: #e9edf5;
+    border: 2px dashed #b8c2d1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-weight: bold;
+}
+
+/* 3) KARTLAR BÖLÜMÜ - 30vh */
+.cards-section {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.cards-section h2 {
+    color: #222;
+    font-size: 1.4rem;
+}
+
+.cards-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    align-content: flex-start;
+}
+
+.card {
+    flex: 1 1 15vw;
+    min-width: 150px;
+    background-color: #f8f9fb;
+    border: 1px solid #d9dee8;
+    border-radius: 10px;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+}
+
+.card h3 {
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.card button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.8vh 1vw;
+    background-color: #6c8ef5;
+    color: white;
+    cursor: pointer;
+}
+
+/* 4) FLEX GROW UYGULAMA - 20vh */
+.flex-grow-section {
+    height: 20vh;
+    display: flex;
+    align-items: stretch;
+    gap: 1vw;
+}
+
+.grow-box {
+    border-radius: 10px;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    color: #333;
+    font-weight: 600;
+}
+
+.box1 {
+    flex-grow: 1;
+    background-color: #dfeeff;
+}
+
+.box2 {
+    flex-grow: 2;
+    background-color: #dff5df;
+}
+
+.box3 {
+    flex-grow: 1;
+    background-color: #ffe8d6;
+}
+
+/* 5) FOOTER - 10vh */
+.footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: #444;
+    font-weight: 500;
+}
