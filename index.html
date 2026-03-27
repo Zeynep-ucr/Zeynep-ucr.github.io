@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox Ödevi</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa | Kişisel Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="wrapper">
 
         <!-- 1) NAVBAR -->
         <nav class="navbar">
-            <div class="logo">LOGO</div>
+            <div class="logo">ZU Logo</div>
 
-            <div class="nav-links">
-                <a href="#">Ana Sayfa</a>
-                <a href="#">Hakkında</a>
-                <a href="#">Dersler</a>
-                <a href="#">İletişim</a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html">İlgi Alanlarım</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
         </nav>
 
         <!-- 2) HERO -->
         <section class="hero">
             <div class="hero-text">
-                <h1>Hero Başlık</h1>
+                <h1>Zeynep UÇAR</h1>
                 <p>
-                    Bu bölümde flex-direction: row, justify-content: space-between
-                    ve align-items: stretch kullanılmıştır.
+                    Bilgisayar Mühendisliği öğrencisiyim. Web geliştirme, sistem programlama
+                    ve backend alanlarında kendimi geliştiriyorum.
                 </p>
-                <button>Buton</button>
+                <a class="hero-button" href="contact.html">Benimle İletişime Geç</a>
             </div>
 
             <div class="hero-image">
-                Görsel Kutusu
+                <div class="image-box">
+                    Görsel Kutusu
+                </div>
             </div>
         </section>
 
@@ -43,66 +46,71 @@
 
             <div class="cards-container">
                 <div class="card">
-                    <h3>Kart 1</h3>
-                    <p>Kısa açıklama metni</p>
-                    <button>Buton</button>
+                    <h3>Üniversite</h3>
+                    <p>Marmara Üniversitesi öğrencisiyim.</p>
+                    <a href="about.html">Detay</a>
                 </div>
 
                 <div class="card">
-                    <h3>Kart 2</h3>
-                    <p>Kısa açıklama metni</p>
-                    <button>Buton</button>
+                    <h3>Bölüm</h3>
+                    <p>Bilgisayar Mühendisliği alanında eğitim alıyorum.</p>
+                    <a href="about.html">Detay</a>
                 </div>
 
                 <div class="card">
-                    <h3>Kart 3</h3>
-                    <p>Kısa açıklama metni</p>
-                    <button>Buton</button>
+                    <h3>Web Geliştirme</h3>
+                    <p>HTML, CSS ve temel web tasarımı üzerine çalışıyorum.</p>
+                    <a href="interests.html">Detay</a>
                 </div>
 
                 <div class="card">
-                    <h3>Kart 4</h3>
-                    <p>Kısa açıklama metni</p>
-                    <button>Buton</button>
+                    <h3>Backend</h3>
+                    <p>Güvenli ve sürdürülebilir sistemler geliştirmek istiyorum.</p>
+                    <a href="about.html">Detay</a>
                 </div>
 
                 <div class="card">
-                    <h3>Kart 5</h3>
-                    <p>Kısa açıklama metni</p>
-                    <button>Buton</button>
+                    <h3>Sistem Programlama</h3>
+                    <p>Linux, WSL ve düşük seviye programlamaya ilgi duyuyorum.</p>
+                    <a href="interests.html">Detay</a>
                 </div>
 
                 <div class="card">
-                    <h3>Kart 6</h3>
-                    <p>Kısa açıklama metni</p>
-                    <button>Buton</button>
+                    <h3>İletişim</h3>
+                    <p>Benimle iletişim kurmak için iletişim sayfasını ziyaret edebilirsiniz.</p>
+                    <a href="contact.html">Detay</a>
                 </div>
             </div>
         </section>
 
         <!-- 4) FLEX GROW UYGULAMA -->
-        <section class="flex-grow-section">
-            <div class="grow-box box1">
-                <h3>1 Kutu</h3>
-                <p>flex-grow: 1</p>
-            </div>
+        <section class="grow-section">
+            <h2>Flex Grow Uygulama</h2>
 
-            <div class="grow-box box2">
-                <h3>2 Kutu</h3>
-                <p>flex-grow: 2</p>
-            </div>
+            <div class="grow-container">
+                <div class="grow-box box-1">
+                    <h3>1. Kutu</h3>
+                    <p>flex-grow: 1</p>
+                </div>
 
-            <div class="grow-box box3">
-                <h3>3 Kutu</h3>
-                <p>flex-grow: 1</p>
+                <div class="grow-box box-2">
+                    <h3>2. Kutu</h3>
+                    <p>flex-grow: 2</p>
+                </div>
+
+                <div class="grow-box box-3">
+                    <h3>3. Kutu</h3>
+                    <p>flex-grow: 1</p>
+                </div>
             </div>
         </section>
 
         <!-- 5) FOOTER -->
         <footer class="footer">
-            <p>© 2026 - Flexbox Ödevi</p>
+            <p>© 2026 Zeynep UÇAR | Web Programlama Dersi</p>
         </footer>
 
     </div>
+
 </body>
 </html>
