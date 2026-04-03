@@ -346,7 +346,6 @@ transition:0.25s;
 .mini-card a:hover{
 background:#1d4ed8;
 text-decoration:none;
-transform:translateY(-2px);
 }
 
 /* HIZLI BİLGİLER */
@@ -630,6 +629,18 @@ padding:18px 12px 36px 12px;
 font-size:14px;
 }
 
+@keyframes lab5-bounce{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes lab5-float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
+}
+
 /* RESPONSIVE */
 @media (max-width:900px){
 
@@ -657,18 +668,6 @@ text-align:center;
 .mini-card{
 flex:1 1 100%;
 }
-}
-
-@keyframes lab5-bounce{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
-}
-
-@keyframes lab5-float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-100%{transform:translateY(0);}
 }
 
 @media (max-width:700px){
