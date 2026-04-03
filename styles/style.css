@@ -1,3 +1,410 @@
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f7fb;
+color:#1e293b;
+line-height:1.6;
+}
+
+.page-wrapper{
+width:92%;
+max-width:1100px;
+margin:0 auto;
+}
+
+/* INDEX ANA YAPI */
+.page-wrapper.home-wrapper{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+gap:18px;
+padding:10px 0 24px 0;
+}
+
+header{
+margin-top:30px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:white;
+border-radius:22px;
+padding:42px 24px;
+text-align:center;
+box-shadow:0 14px 32px rgba(15,23,42,0.18);
+}
+
+header h1{
+margin:0 0 10px 0;
+font-size:36px;
+}
+
+header p{
+margin:0;
+color:#dbeafe;
+}
+
+nav{
+margin:18px 0 24px 0;
+background:#ffffff;
+border:1px solid #dbe3ef;
+border-radius:16px;
+padding:14px 20px;
+box-shadow:0 8px 24px rgba(15,23,42,0.05);
+}
+
+nav a{
+text-decoration:none;
+color:#1e3a8a;
+font-weight:bold;
+padding:10px 16px;
+border-radius:10px;
+transition:0.25s;
+}
+
+nav a:hover{
+background:#eff6ff;
+}
+
+.home-nav-list{
+margin:0;
+padding:0;
+list-style:none;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.home-logo{
+font-size:22px;
+font-weight:bold;
+color:#1e3a8a;
+margin-right:auto;
+padding:10px 16px 10px 0;
+}
+
+main{
+background:#ffffff;
+border:1px solid #dbe3ef;
+border-radius:20px;
+padding:32px 28px;
+box-shadow:0 10px 28px rgba(15,23,42,0.05);
+}
+
+main h1{
+margin-top:0;
+}
+
+main h2{
+color:#0f172a;
+margin-top:24px;
+margin-bottom:12px;
+font-size:24px;
+}
+
+main p,
+main li{
+color:#475569;
+font-size:15px;
+}
+
+blockquote{
+margin:20px 0;
+padding:18px 20px;
+background:#f8fafc;
+border-left:5px solid #2563eb;
+border-radius:10px;
+font-style:italic;
+color:#334155;
+}
+
+ul,ol{
+padding-left:22px;
+}
+
+dl{
+background:#f8fafc;
+border:1px solid #e2e8f0;
+border-radius:12px;
+padding:18px;
+margin-top:12px;
+}
+
+dt{
+font-weight:bold;
+color:#1e3a8a;
+margin-top:10px;
+}
+
+dd{
+margin-left:0;
+margin-bottom:10px;
+color:#475569;
+}
+
+main a{
+color:#2563eb;
+text-decoration:none;
+font-weight:bold;
+}
+
+main a:hover{
+text-decoration:underline;
+}
+
+input,select,textarea{
+width:100%;
+padding:14px;
+margin-bottom:18px;
+border:1px solid #cbd5e1;
+border-radius:12px;
+background:#f8fafc;
+font-family:Arial, sans-serif;
+font-size:15px;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.option-box{
+background:#f8fafc;
+border:1px solid #e2e8f0;
+border-radius:12px;
+padding:14px;
+margin-bottom:18px;
+}
+
+.button-group{
+display:flex;
+gap:14px;
+}
+
+button{
+flex:1;
+padding:14px;
+border:none;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+font-size:15px;
+}
+
+.submit-btn{
+background:#2563eb;
+color:white;
+}
+
+.reset-btn{
+background:#dc2626;
+color:white;
+}
+
+footer{
+text-align:center;
+color:#64748b;
+padding:28px 12px 40px 12px;
+font-size:14px;
+}
+
+/* INDEX MAIN */
+.home-main-box{
+background:#ffffff;
+border:1px solid #dbe3ef;
+border-radius:20px;
+padding:32px 28px;
+box-shadow:0 10px 28px rgba(15,23,42,0.05);
+}
+
+.home-main-box h2{
+color:#0f172a;
+margin-top:24px;
+margin-bottom:12px;
+font-size:24px;
+}
+
+.home-main-box p,
+.home-main-box li{
+color:#475569;
+font-size:15px;
+}
+
+/* HERO */
+.hero-area{
+min-height:30vh;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+align-items:stretch;
+gap:24px;
+margin-top:12px;
+margin-bottom:28px;
+}
+
+.hero-text,
+.hero-visual{
+flex:1;
+}
+
+.hero-text{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.main-button{
+display:inline-block;
+align-self:flex-start;
+background:#2563eb;
+color:white !important;
+text-decoration:none;
+padding:12px 18px;
+border-radius:10px;
+font-weight:bold;
+margin-top:10px;
+transition:0.25s;
+}
+
+.main-button:hover{
+background:#1d4ed8;
+text-decoration:none;
+}
+
+.hero-visual{
+display:flex;
+align-items:stretch;
+}
+
+.visual-placeholder{
+flex:1;
+background:#eef5ff;
+border:2px dashed #93c5fd;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#1e3a8a;
+font-weight:bold;
+font-size:20px;
+min-height:100%;
+}
+
+/* KARTLAR */
+.home-cards-block{
+margin-top:10px;
+margin-bottom:28px;
+}
+
+.cards-grid{
+min-height:30vh;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+align-items:stretch;
+}
+
+.mini-card{
+background:#f8fafc;
+border:1px solid #dbe3ef;
+border-radius:16px;
+padding:22px;
+flex:1 1 calc(33.333% - 20px);
+min-width:260px;
+display:flex;
+flex-direction:column;
+}
+
+.mini-card h3{
+margin:0 0 12px 0;
+color:#1e3a8a;
+font-size:22px;
+}
+
+.mini-card p{
+margin:0 0 18px 0;
+color:#475569;
+font-size:15px;
+flex-grow:1;
+}
+
+.mini-card a{
+display:inline-block;
+align-self:flex-start;
+background:#2563eb;
+color:white !important;
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.25s;
+}
+
+.mini-card a:hover{
+background:#1d4ed8;
+text-decoration:none;
+transform:translateY(-2px);
+}
+
+/* HIZLI BİLGİLER */
+.home-info-block{
+margin-top:10px;
+margin-bottom:28px;
+}
+
+/* FLEX GROW */
+.grow-block{
+margin-top:10px;
+}
+
+.grow-row{
+min-height:20vh;
+display:flex;
+flex-direction:row;
+align-items:stretch;
+gap:18px;
+}
+
+.grow-card{
+padding:22px;
+border-radius:16px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.grow-card h3{
+margin:0 0 8px 0;
+color:#0f172a;
+font-size:22px;
+}
+
+.grow-card p{
+margin:0;
+font-weight:bold;
+}
+
+.grow-1{
+flex-grow:1;
+background:#e0f2fe;
+border:1px solid #bae6fd;
+}
+
+.grow-2{
+flex-grow:2;
+background:#dcfce7;
+border:1px solid #bbf7d0;
+}
+
+.grow-3{
+flex-grow:1;
+background:#ffedd5;
+border:1px solid #fed7aa;
+}
+
 /* ===================== */
 /* LAB5 - CSS POSITION */
 /* ===================== */
@@ -221,6 +628,35 @@ text-align:center;
 color:#64748b;
 padding:18px 12px 36px 12px;
 font-size:14px;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+
+.home-nav-list{
+justify-content:center;
+}
+
+.home-logo{
+margin-right:0;
+width:100%;
+text-align:center;
+padding-right:0;
+}
+
+.hero-area,
+.grow-row{
+flex-direction:column;
+}
+
+.main-button{
+align-self:stretch;
+text-align:center;
+}
+
+.mini-card{
+flex:1 1 100%;
+}
 }
 
 @keyframes lab5-bounce{
