@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LAB5 - CSS Position</title>
-<link rel="stylesheet" href="lab5.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB5 - CSS Position ile Etkileşimli Duyuru Kartı</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
 
-<!-- Anasayfaya dönüş -->
-<a href="index.html" class="back-btn">Ana Sayfaya Dön</a>
+    <a href="index.html" class="lab5-back-btn">Ana Sayfaya Dön</a>
 
-<!-- Fixed Menü -->
-<div class="fixed-menu">Yardımcı Menü</div>
+    <div class="page-wrapper">
+        <header class="lab5-header">
+            <h1>Teknoloji ve Kariyer Etkinliği</h1>
+            <p>
+                CSS position, hover, transition, transform, z-index ve keyframes
+                kullanılarak hazırlanmış etkileşimli duyuru kartı
+            </p>
+        </header>
 
-<!-- Başlık -->
-<header class="page-title">
-    <h1>Etkinlik Duyuru Kartı</h1>
-</header>
+        <main class="lab5-main">
+            <section class="lab5-container">
+                <div class="lab5-card">
 
-<!-- ANA KAPSAYICI -->
-<div class="container">
+                    <span class="lab5-badge lab5-free">Ücretsiz</span>
+                    <span class="lab5-badge lab5-date">18 Mayıs</span>
+                    <span class="lab5-badge lab5-level">Kontenjan Sınırlı</span>
 
-    <!-- DUYURU KARTI -->
-    <div class="card">
+                    <div class="lab5-circle"></div>
+                    <div class="lab5-ring"></div>
 
-        <span class="badge free">Ücretsiz</span>
-        <span class="badge date">12 Mayıs</span>
+                    <h2>Yazılım, Yapay Zeka ve Kariyer Buluşması</h2>
 
-        <h2>Yazılım Topluluğu Workshop</h2>
+                    <p>
+                        Bilgisayar mühendisliği öğrencileri için hazırlanan bu etkinlikte;
+                        web geliştirme, yapay zeka, proje geliştirme süreçleri ve kariyer
+                        planlaması üzerine bilgilendirici oturumlar yapılacaktır.
+                    </p>
 
-        <p>
-            Bu etkinlikte frontend, backend ve yapay zeka alanlarında 
-            gerçek projeler üzerinden eğitimler verilecektir.
-        </p>
+                    <p>
+                        Etkinlik boyunca konuşmacılar deneyimlerini paylaşacak, katılımcılar
+                        ise gerçek proje örnekleri üzerinden yeni bakış açıları kazanacaktır.
+                    </p>
 
-        <div class="info-box">Konum: Marmara Üniversitesi</div>
-        <div class="deadline">Son Başvuru</div>
+                    <div class="lab5-info-box">Konum: Marmara Üniversitesi Konferans Salonu</div>
+                    <div class="lab5-deadline">Son Başvuru: 15 Mayıs</div>
+                </div>
+            </section>
+        </main>
 
-        <!-- Dekoratif shape -->
-        <div class="circle"></div>
-
+        <footer class="lab5-footer">
+            2026 | LAB5 CSS Position Örnek Çalışması | Zeynep UÇAR
+        </footer>
     </div>
 
-</div>
-
-<footer>
-    2026 - LAB5 CSS Position Çalışması | Zeynep Uçar
-</footer>
+    <div class="lab5-fixed-menu">Yardımcı Menü</div>
 
 </body>
 </html>
