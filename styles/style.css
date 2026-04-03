@@ -431,3 +431,142 @@ text-align:center;
 flex:1 1 100%;
 }
 }
+
+/* ===================== */
+/* LAB5 - CSS POSITION */
+/* ===================== */
+
+/* BACK BUTTON */
+.lab5-back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #3b82f6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.lab5-back-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* FIXED MENU */
+.lab5-fixed-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, purple, #7c3aed);
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    animation: lab5-bounce 2s infinite;
+}
+
+/* TITLE */
+.lab5-title {
+    text-align: center;
+    margin-top: 90px;
+}
+
+/* CONTAINER */
+.lab5-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* CARD */
+.lab5-card {
+    position: relative;
+    width: 360px;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #c7d2fe, #e9d5ff);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+/* HOVER EFFECT */
+.lab5-card:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+/* BADGES */
+.lab5-badge {
+    position: absolute;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.lab5-free {
+    top: 15px;
+    left: 15px;
+    background: #fde68a;
+}
+
+.lab5-date {
+    top: 15px;
+    right: 15px;
+    background: #bbf7d0;
+}
+
+/* INFO BOX */
+.lab5-info {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.lab5-info:hover {
+    background: #e0f2fe;
+    transform: translateX(-50%) scale(1.05);
+    cursor: pointer;
+}
+
+/* DEADLINE */
+.lab5-deadline {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #fca5a5;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+/* DECOR SHAPE */
+.lab5-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 50%;
+    right: -40px;
+    top: 70px;
+    z-index: 0;
+}
+
+/* TEXT ÜSTTE KALSIN */
+.lab5-card * {
+    position: relative;
+    z-index: 2;
+}
+
+/* KEYFRAMES */
+@keyframes lab5-bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
