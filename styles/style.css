@@ -352,8 +352,8 @@ background:#1d4ed8;
 text-decoration:none;
 }
 
-/* LAB5 kartını hafif öne çıkar */
-.mini-card:last-child{
+/* LAB kartlarını öne çıkar */
+.highlight-card{
 border:2px solid #2563eb;
 box-shadow:0 10px 20px rgba(37,99,235,0.12);
 }
@@ -414,6 +414,194 @@ background:#ffedd5;
 border:1px solid #fed7aa;
 }
 
+/* LAB5 SAYFASI */
+.lab5-page{
+background:linear-gradient(135deg,#eaf2ff,#f8fbff);
+min-height:100vh;
+}
+
+.lab5-back-btn{
+position:fixed;
+top:20px;
+left:20px;
+z-index:1000;
+background:#2563eb;
+color:#ffffff;
+text-decoration:none;
+font-weight:bold;
+padding:12px 18px;
+border-radius:12px;
+box-shadow:0 10px 24px rgba(37,99,235,0.25);
+transition:0.25s;
+}
+
+.lab5-back-btn:hover{
+background:#1d4ed8;
+}
+
+.lab5-header{
+position:relative;
+margin-top:90px;
+text-align:center;
+}
+
+.lab5-container{
+position:relative;
+width:100%;
+padding:40px 0 20px 0;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.lab5-card{
+position:relative;
+width:100%;
+max-width:760px;
+min-height:380px;
+background:linear-gradient(135deg,#ffffff,#eef4ff);
+border:1px solid #cfe0ff;
+border-radius:28px;
+padding:80px 36px 40px 36px;
+box-shadow:0 20px 40px rgba(15,23,42,0.12);
+overflow:hidden;
+animation:lab5Float 3s ease-in-out infinite;
+}
+
+.lab5-card h2{
+margin:0 0 16px 0;
+font-size:34px;
+color:#0f172a;
+position:relative;
+z-index:2;
+}
+
+.lab5-card p{
+margin:0 0 24px 0;
+font-size:18px;
+color:#475569;
+position:relative;
+z-index:2;
+max-width:500px;
+}
+
+.lab5-badge{
+position:absolute;
+padding:10px 16px;
+border-radius:999px;
+font-size:14px;
+font-weight:bold;
+z-index:3;
+box-shadow:0 8px 18px rgba(15,23,42,0.10);
+}
+
+.lab5-free{
+top:22px;
+left:24px;
+background:#dcfce7;
+color:#166534;
+}
+
+.lab5-date{
+top:22px;
+right:24px;
+background:#dbeafe;
+color:#1d4ed8;
+}
+
+.lab5-level{
+bottom:24px;
+right:24px;
+background:#fef3c7;
+color:#92400e;
+}
+
+.lab5-circle{
+position:absolute;
+width:140px;
+height:140px;
+border-radius:50%;
+background:rgba(59,130,246,0.12);
+top:70px;
+right:70px;
+z-index:1;
+animation:lab5Pulse 2.5s infinite;
+}
+
+.lab5-ring{
+position:absolute;
+width:220px;
+height:220px;
+border:2px dashed rgba(37,99,235,0.35);
+border-radius:50%;
+bottom:-40px;
+left:-40px;
+z-index:1;
+animation:lab5Rotate 12s linear infinite;
+}
+
+.lab5-info-box{
+position:relative;
+display:inline-block;
+background:#2563eb;
+color:#ffffff;
+padding:14px 20px;
+border-radius:14px;
+font-weight:bold;
+z-index:2;
+box-shadow:0 10px 20px rgba(37,99,235,0.25);
+}
+
+.lab5-deadline{
+position:absolute;
+left:36px;
+bottom:24px;
+background:#0f172a;
+color:#ffffff;
+padding:12px 18px;
+border-radius:12px;
+font-weight:bold;
+z-index:2;
+}
+
+.lab5-footer{
+margin-top:18px;
+background:transparent;
+box-shadow:none;
+color:#64748b;
+font-weight:bold;
+}
+
+.lab5-fixed-menu{
+position:fixed;
+right:18px;
+bottom:18px;
+background:#0f172a;
+color:#ffffff;
+padding:14px 18px;
+border-radius:16px;
+font-weight:bold;
+box-shadow:0 12px 24px rgba(15,23,42,0.20);
+z-index:1000;
+}
+
+@keyframes lab5Float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes lab5Pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+@keyframes lab5Rotate{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
 /* RESPONSIVE */
 @media (max-width:900px){
 
@@ -440,5 +628,30 @@ text-align:center;
 
 .mini-card{
 flex:1 1 100%;
+}
+
+.lab5-card{
+padding:90px 22px 80px 22px;
+min-height:420px;
+}
+
+.lab5-card h2{
+font-size:28px;
+}
+
+.lab5-card p{
+font-size:16px;
+}
+
+.lab5-circle{
+width:100px;
+height:100px;
+right:30px;
+top:90px;
+}
+
+.lab5-ring{
+width:170px;
+height:170px;
 }
 }
