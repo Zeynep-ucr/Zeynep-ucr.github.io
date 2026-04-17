@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB6 - JavaScript Uygulamaları</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f3f3f3;
+            color:#222;
+            line-height:1.6;
+        }
+
+        .page-container{
+            width:80%;
+            max-width:1000px;
+            margin:40px auto;
+        }
+
+        .assignment-section{
+            margin-bottom:50px;
+        }
+
+        .assignment-section h3{
+            margin-bottom:10px;
+            font-size:24px;
+        }
+
+        .description{
+            font-size:18px;
+            line-height:1.6;
+            margin-bottom:25px;
+        }
+
+        .card{
+            background:#ffffff;
+            border:1px solid #ddd;
+            border-radius:6px;
+            padding:20px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom:20px;
+        }
+
+        .card h2{
+            margin-top:0;
+            font-size:34px;
+            margin-bottom:20px;
+        }
+
+        .form-group{
+            margin-bottom:12px;
+        }
+
+        input, select{
+            width:100%;
+            padding:12px;
+            border:1px solid #bfbfbf;
+            border-radius:4px;
+            font-size:16px;
+            margin-bottom:12px;
+        }
+
+        label{
+            display:block;
+            font-weight:bold;
+            margin-bottom:8px;
+            margin-top:8px;
+        }
+
+        .primary-btn{
+            width:100%;
+            background:#1e73ff;
+            color:white;
+            border:none;
+            padding:12px;
+            border-radius:4px;
+            font-size:16px;
+            cursor:pointer;
+            margin-top:8px;
+        }
+
+        .primary-btn:hover{
+            background:#125ed6;
+        }
+
+        .result-box{
+            margin-top:18px;
+            background:#f0f0f0;
+            padding:18px;
+            border-radius:4px;
+            border:1px solid #ddd;
+        }
+
+        .result-box h4{
+            margin-top:0;
+            margin-bottom:10px;
+            font-size:24px;
+        }
+
+        .result-box p{
+            margin:6px 0;
+            font-size:17px;
+        }
+
+        .converter-grid{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .converter-grid .card{
+            flex:1 1 320px;
+        }
+
+        .success-box{
+            margin-top:18px;
+            background:#cfead2;
+            color:#1d3b1f;
+            font-weight:bold;
+            text-align:center;
+            padding:14px;
+            border-radius:4px;
+            border:1px solid #b7d8bc;
+            font-size:18px;
+        }
+
+        .back-link{
+            display:inline-block;
+            margin-top:10px;
+            text-decoration:none;
+            color:#1e73ff;
+            font-weight:bold;
+        }
+
+        .back-link:hover{
+            text-decoration:underline;
+        }
+
+        @media (max-width:768px){
+            .page-container{
+                width:92%;
+            }
+
+            .card h2{
+                font-size:28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+
+        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+
+        <section class="assignment-section">
+            <h3>Uygulama-1</h3>
+            <p class="description">
+                Kullanıcı web sayfasında form aracılığıyla Ad Soyad, Vize notu ve Final notunu girecek
+                (input type text), ortalama hesaplayıp (vize %40, final %60) harf notuna çevirecek ve
+                geçti kaldı yazacaktır (durum >= 50 ise geçti). Bu uygulama için HTML+CSS+Javascript
+                kodlarını içeren uygulamayı gerçekleştiriniz.
+            </p>
+
+            <div class="card">
+                <h2>Öğrenci Not Hesaplama</h2>
+
+                <div class="form-group">
+                    <input type="text" id="studentName" placeholder="Ad Soyad">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="midterm" placeholder="Vize Notu">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="final" placeholder="Final Notu">
+                </div>
+
+                <button class="primary-btn" onclick="calculateGrade()">Hesapla</button>
+
+                <div class="result-box" id="gradeResult">
+                    <h4>Sonuç burada görünecek</h4>
+                    <p>Ortalama: -</p>
+                    <p>Harf Notu: -</p>
+                    <p>Durum: -</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="assignment-section">
+            <h3>Uygulama-2</h3>
+            <p class="description">
+                Birim Dönüştürücü Uygulaması: Farklı mühendislik birimlerini
+                (örneğin; Sıcaklık: Celsius-Fahrenheit-Kelvin veya Uzunluk: Metre-Kilometre-Mil)
+                birbirine dönüştüren bir uygulama geliştirilecektir.
+            </p>
+
+            <div class="converter-grid">
+
+                <div class="card">
+                    <h2>Birim Dönüştürücü</h2>
+
+                    <label for="convertValue1">Değer Giriniz:</label>
+                    <input type="text" id="convertValue1" placeholder="Örn: 50">
+
+                    <label for="conversionType1">Dönüşüm Tipi:</label>
+                    <select id="conversionType1">
+                        <option value="c_to_f">Celsius -> Fahrenheit</option>
+                        <option value="m_to_km">Metre -> Kilometre</option>
+                        <option value="kg_to_g">Kilogram -> Gram</option>
+                    </select>
+
+                    <button class="primary-btn" onclick="convertUnit('1')">Hesapla</button>
+
+                    <div class="success-box" id="convertResult1">Sonuç: -</div>
+                </div>
+
+                <div class="card">
+                    <h2>Birim Dönüştürücü</h2>
+
+                    <label for="convertValue2">Değer Giriniz:</label>
+                    <input type="text" id="convertValue2" placeholder="Örn: 50">
+
+                    <label for="conversionType2">Dönüşüm Tipi:</label>
+                    <select id="conversionType2">
+                        <option value="f_to_c">Fahrenheit -> Celsius</option>
+                        <option value="km_to_m">Kilometre -> Metre</option>
+                        <option value="g_to_kg">Gram -> Kilogram</option>
+                    </select>
+
+                    <button class="primary-btn" onclick="convertUnit('2')">Hesapla</button>
+
+                    <div class="success-box" id="convertResult2">Sonuç: -</div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function getLetterGrade(average){
+            if(average >= 90) return "AA";
+            if(average >= 85) return "BA";
+            if(average >= 80) return "BB";
+            if(average >= 75) return "CB";
+            if(average >= 70) return "CC";
+            if(average >= 65) return "DC";
+            if(average >= 60) return "DD";
+            if(average >= 50) return "FD";
+            return "FF";
+        }
+
+        function calculateGrade(){
+            const name = document.getElementById("studentName").value.trim();
+            const midterm = parseFloat(document.getElementById("midterm").value);
+            const final = parseFloat(document.getElementById("final").value);
+            const resultBox = document.getElementById("gradeResult");
+
+            if(name === "" || isNaN(midterm) || isNaN(final)){
+                resultBox.innerHTML = `
+                    <h4>Hata</h4>
+                    <p>Lütfen tüm alanları doğru şekilde doldurun.</p>
+                `;
+                return;
+            }
+
+            if(midterm < 0 || midterm > 100 || final < 0 || final > 100){
+                resultBox.innerHTML = `
+                    <h4>Hata</h4>
+                    <p>Notlar 0 ile 100 arasında olmalıdır.</p>
+                `;
+                return;
+            }
+
+            const average = (midterm * 0.4) + (final * 0.6);
+            const letterGrade = getLetterGrade(average);
+            const status = average >= 50 ? "Geçti" : "Kaldı";
+
+            resultBox.innerHTML = `
+                <h4>${name}</h4>
+                <p>Ortalama: ${average.toFixed(2)}</p>
+                <p>Harf Notu: ${letterGrade}</p>
+                <p>Durum: ${status}</p>
+            `;
+        }
+
+        function convertUnit(boxNumber){
+            const valueInput = document.getElementById("convertValue" + boxNumber);
+            const typeSelect = document.getElementById("conversionType" + boxNumber);
+            const resultBox = document.getElementById("convertResult" + boxNumber);
+
+            const value = parseFloat(valueInput.value);
+            const type = typeSelect.value;
+
+            if(isNaN(value)){
+                resultBox.textContent = "Sonuç: Lütfen geçerli bir sayı girin";
+                return;
+            }
+
+            let result = 0;
+            let formattedResult = "";
+
+            switch(type){
+                case "c_to_f":
+                    result = (value * 9 / 5) + 32;
+                    formattedResult = result.toFixed(2);
+                    break;
+
+                case "m_to_km":
+                    result = value / 1000;
+                    formattedResult = result.toFixed(3);
+                    break;
+
+                case "kg_to_g":
+                    result = value * 1000;
+                    formattedResult = result.toFixed(3);
+                    break;
+
+                case "f_to_c":
+                    result = (value - 32) * 5 / 9;
+                    formattedResult = result.toFixed(2);
+                    break;
+
+                case "km_to_m":
+                    result = value * 1000;
+                    formattedResult = result.toFixed(3);
+                    break;
+
+                case "g_to_kg":
+                    result = value / 1000;
+                    formattedResult = result.toFixed(3);
+                    break;
+
+                default:
+                    resultBox.textContent = "Sonuç: Geçersiz dönüşüm";
+                    return;
+            }
+
+            resultBox.textContent = "Sonuç: " + formattedResult;
+        }
+    </script>
+
+</body>
+</html>
